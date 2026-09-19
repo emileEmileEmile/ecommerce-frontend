@@ -35,3 +35,19 @@ export interface Cart {
     userId: number;
     items: CartItem[];
 }
+
+export interface OrderItem {
+    id: number;
+    quantity: number;
+    price: string;
+    productId: number;
+    product: Product;
+  }
+  
+  export interface Order {
+    id: number;
+    status: string;
+    total: string;
+    createdAt: string;
+    items: OrderItem[];
+  }

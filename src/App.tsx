@@ -5,6 +5,7 @@ import ProductsPage from './pages/ProductsPage';
 import AdminProductsPage from './pages/AdminProductsPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import CartPage from './pages/CartPage';
+import OrdersPage from './pages/OrdersPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/" element={<ProductsPage />} />
         <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} />
+        <Route path="/orders" element={<ProtectedRoute><OrdersPage /></ProtectedRoute>} />
         <Route
           path="/admin/products"
           element={
