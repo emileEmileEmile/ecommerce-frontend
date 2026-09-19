@@ -4,6 +4,7 @@ import RegisterPage from './pages/RegisterPage';
 import ProductsPage from './pages/ProductsPage';
 import AdminProductsPage from './pages/AdminProductsPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import CartPage from './pages/CartPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/" element={<ProductsPage />} />
+        <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} />
         <Route
           path="/admin/products"
           element={

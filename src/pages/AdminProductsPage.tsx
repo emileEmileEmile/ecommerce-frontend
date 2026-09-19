@@ -106,7 +106,7 @@ export default function AdminProductsPage() {
     <div>
       <h1>Admin Products Page</h1>
 
-      <h2>Create Product</h2>
+      <h2>{editingProductId ? 'Update Product' : 'Create Product'}</h2>
       <form onSubmit={handleFormSubmit}>
 
         <div>

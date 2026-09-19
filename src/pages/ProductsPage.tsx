@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getAllProducts } from '../services/productService';
 import type { Product } from '../types/product';
+import { addItem } from '../services/cartService';
 
 export default function ProductsPage() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -33,7 +34,9 @@ export default function ProductsPage() {
           {products.map((product) => (
             <li key={product.id}>
               <strong>{product.name}</strong> - R{product.price} ({product.stock} in stock)
+              <button onClick={() => addItem(product.id, 1)}>Add to Cart</button>
             </li>
+            
           ))}
         </ul>
       </div>
