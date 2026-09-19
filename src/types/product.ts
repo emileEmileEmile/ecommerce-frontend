@@ -21,3 +21,17 @@ export interface CreateProductInput {
     stock: number;
     categoryId: number;
 }
+
+export interface CartItem {
+    id: number;
+    quantity: number;
+    productId: number;
+    cartId: number;
+    product: Product;
+}
+
+export interface Cart {
+    id: number;
+    userId: number;
+    items: CartItem[];
+}
